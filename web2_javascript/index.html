@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- style 안에 있으면 css // a 는 모두를 뜻함 -->
+    <!-- 좀더 포괄적인 것이 구체적인 것보다 우선순위가 높다. 우선순위 : id > class > tag -->
+    <link rel="stylesheet" href="/web2_css/style.css">
+</head>
+
+<body>
+    <h1><a href="/web2_css/index.html">WEB</font></a></h1>
+    <div id = "grid">
+        <ol>
+            /* <!-- html --> */
+            <li><a href="/web2_css/1.html"><font color="red">html</font></a></li>
+            /* <!-- css style --> */
+            <li><a href="/web2_css/2.html" style="color:red; text-decoration: underline;">css</font></a></li>
+            <img src="css.png" width=" 100%">
+            /* <!-- class . --> */
+            <li><a href="/web2_css/3.html" class="notsee">javascript</font></a></li>
+            /* <!-- 2개 class에 영향을 받고있다. 이럴 경우 보다 가까이에 있는 명령이 더 큰 영향력을 가지게 된다. --> */
+            <li><a href="/web2_css/3.html" class="class1 class2">javascript</font></a></li>
+            <li><a href="/web2_css/3.html" class="class2 class1">javascript</font></a></li>
+            /* <!-- id선택자와 class선택자가 붙으면 id선택자가 이긴다. --> */
+            <li><a href="/web2_css/3.html" class="active notsee" id="id1">javascript</font></a></li>
+        </ol>
+        <div id = "article">
+            <h2>html</h2>
+
+            <p>
+                여기는 html 페이지입니다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

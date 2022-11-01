@@ -1,0 +1,72 @@
+/* <!-- style 안에 있으면 css // a 는 모두를 뜻함 --> */
+/* <!-- 좀더 포괄적인 것이 구체적인 것보다 우선순위가 높다. 우선순위 : id > class > tag --> */
+
+<style>
+    body{
+        margin: 0;
+    }
+
+    /* id 선택자(selector) id는 단 한번만 사용가능하다. 마치 id카드처럼 유일무이한 값 */
+    #id1 {
+        color: purple;
+    }
+    /* class 선택자(selector) */
+    
+    .class1 {
+        color: gray;
+    }
+    
+    .class2 {
+        color: red;
+    }
+    
+    /* tag 선택자(selector) */
+    a {
+        color: none;
+        text-decoration: none;
+    }
+    
+    h1 {
+        color: green;
+        font-size: 60px;
+        text-align: center;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    #grid {
+        display: grid;
+        /* column = 열, low = 행 */
+        grid-template-columns: 150px 1fr;
+    
+        /* id grid아래있는 ol tag */
+    }
+
+    #grid ol {
+        
+        border-right: 1px solid gray;
+        width: 100px;
+        margin: 0px;
+        padding: 20px;
+        padding-left: 34px;
+    }
+
+    /* id값을 써서 굳이 묶어줄 필요는 없지만 의미를 분명히 하기 위해서 묶어주는 방법도 나쁜 방법은 아니다 */
+    #grid #article {
+        padding-left: 25px;
+    }
+
+    @media(max-width:800px) {
+        #grid {
+            display: block;
+        }
+        #grid ol {
+            border-right: none;
+        }
+        h1 {
+            border-bottom: none;
+        }
+    }
+
+</style>
