@@ -8,25 +8,45 @@
     
     <!-- style 안에 있으면 css // a 는 모두를 뜻함 -->
     <!-- 좀더 포괄적인 것이 구체적인 것보다 우선순위가 높다. 우선순위 : id > class > tag -->
-    <link rel="stylesheet" href="/web2_css/style.css">
+    <link rel="stylesheet" href="/web2_javascript/style.css">
 </head>
 
 <body>
-    <h1><a href="/web2_css/index.html">WEB</font></a></h1>
+    <h1><a href="/web2_javascript/index.html">WEB</font></a></h1>
+    <input type="button" value= "night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value= "day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
+    <input id= night_day type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(document.querySelector('#night_day').value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        document.querySelector('#night_day').value = 'day'
+    } else{
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        document.querySelector('#night_day').value = 'night'
+    }
+    ">
     <div id = "grid">
         <ol>
-            /* <!-- html --> */
-            <li><a href="/web2_css/1.html"><font color="red">html</font></a></li>
-            /* <!-- css style --> */
-            <li><a href="/web2_css/2.html" style="color:red; text-decoration: underline;">css</font></a></li>
+            <!-- html -->
+            <li><a href="/web2_javascript/1.html"><font color="red">html</font></a></li>
+            <!-- css style -->
+            <li><a href="/web2_javascript/2.html" style="color:red; text-decoration: underline;">css</font></a></li>
             <img src="css.png" width=" 100%">
-            /* <!-- class . --> */
-            <li><a href="/web2_css/3.html" class="notsee">javascript</font></a></li>
-            /* <!-- 2개 class에 영향을 받고있다. 이럴 경우 보다 가까이에 있는 명령이 더 큰 영향력을 가지게 된다. --> */
-            <li><a href="/web2_css/3.html" class="class1 class2">javascript</font></a></li>
-            <li><a href="/web2_css/3.html" class="class2 class1">javascript</font></a></li>
-            /* <!-- id선택자와 class선택자가 붙으면 id선택자가 이긴다. --> */
-            <li><a href="/web2_css/3.html" class="active notsee" id="id1">javascript</font></a></li>
+            <!-- class -->
+            <li><a href="/web2_javascript/3.html" class="notsee">javascript</font></a></li>
+            <!-- 2개 class에 영향을 받고있다. 이럴 경우 보다 가까이에 있는 명령이 더 큰 영향력을 가지게 된다. -->
+            <li><a href="/web2_javascript/3.html" class="class1 class2">javascript</font></a></li>
+            <li><a href="/web2_javascript/3.html" class="class2 class1">javascript</font></a></li>
+            <!-- id선택자와 class선택자가 붙으면 id선택자가 이긴다. -->
+            <li><a href="/web2_javascript/3.html" class="active notsee" id="id1">javascript</font></a></li>
         </ol>
         <div id = "article">
             <h2>html</h2>
@@ -34,6 +54,18 @@
             <p>
                 여기는 html 페이지입니다.
             </p>
+            <!-- this로 자기 자신을 가르킨다. -->
+            <input type="button" value="night" onclick="
+            if(this.value === 'night'){
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                this.value = 'day'
+            } else{
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                this.value = 'night'
+            }
+            ">
         </div>
     </div>
 </body>
